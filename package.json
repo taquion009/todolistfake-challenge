@@ -1,0 +1,30 @@
+{
+  "name": "todolistfake",
+  "version": "1.0.0",
+  "description": "fronted-mentor challenges todo list",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taquion009/todolistfake-challenges.git"
+  },
+  "keywords": [
+    "todo",
+    "list",
+    "challenges",
+    "frontend",
+    "mentor",
+    "javascript",
+    "html",
+    "css",
+    "vanilla"
+  ],
+  "author": "Rodrigo Milesi <rmilesi009@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taquion009/todolistfake-challenges/issues"
+  },
+  "homepage": "https://github.com/taquion009/todolistfake-challenges#readme"
+}

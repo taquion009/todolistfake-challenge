@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+:root {
+  --Background: hsl(240deg, 11%, 96%);
+  --principal-color-text: hsl(235, 21%, 11%);
+  --color-text-header: hsl(0, 0%, 98%);
+  --bg-color-header: hsl(0, 0%, 98%);
+  --sombra: hsl(236, 33%, 92%);
+  --bg-movil: url(./assets/img/bg-mobile-light.jpg);
+  --bg-desktop: url(./assets/img/bg-desktop-light.jpg);
+  --border: hsl(234, 39%, 85%);
+  --color-text-hover: hsl(237, 14%, 26%);
+  --color-text-medio: hsl(234, 39%, 85%);
+
+  /* primary */
+  --Bright-Blue: hsl(220, 98%, 61%);
+  --Check-Background: linear-gradient(
+    135deg,
+    hsl(192, 100%, 67%) 13%,
+    hsl(280, 87%, 65%) 66%
+  );
+
+  /* light theme */
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+  --Light-Grayish-Blue: hsl(233, 11%, 84%);
+  --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+  --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+  /* dark theme */
+  --Very-Dark-Blue: hsl(235, 21%, 11%);
+  --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+  --Light-Grayish-Blue: hsl(234, 39%, 85%);
+  --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+  --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+  --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+  --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: var(--Background);
+  color: var(--principal-color-text);
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  font-family: "Josefin Sans", sans-serif;
+}
+p,
+span,
+a,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input {
+  padding: 0;
+  margin: 0;
+  background: none;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+.container-header {
+  height: 201px;
+  background: var(--bg-movil);
+  background-size: cover;
+  padding: 2.5rem 1.5rem;
+  color: var(--color-text-header);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: local;
+}
+.container-header header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.46rem 0;
+  max-width: 545px;
+  margin: auto;
+}
+.container-header header .icon-theme {
+  width: 1.3rem;
+  height: 1.3rem;
+  cursor: pointer;
+}
+.container-header header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 9px;
+}
+.container-header form {
+  max-width: 545px;
+  margin: auto;
+  margin-top: 1.6rem;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-color-header);
+  position: relative;
+}
+.container-header form .add-item {
+  padding-left: 2.5rem;
+  font-size: 0.7rem;
+  color: var(--principal-color-text);
+}
+
+main {
+  transform: translate(0px, -3.2rem);
+  padding: 0 1.5rem;
+}
+main .container-todo-list {
+  max-width: 545px;
+  margin: 1.4rem auto;
+  border-radius: 5px;
+  box-shadow: 0px 30px 16px -20px var(--sombra);
+}
+main .container-todo-list ul,
+main .container-todo-list ul li {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+}
+main .container-todo-list ul {
+  border-radius: 5px;
+  background-color: var(--bg-color-header);
+}
+main .container-todo-list ul:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+main .container-todo-list ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.23rem 1rem;
+  border-bottom: thin solid var(--border);
+  position: relative;
+}
+main .container-todo-list ul li p {
+  flex: auto;
+  font-size: 0.7rem;
+  padding-left: 2.5rem;
+  cursor: pointer;
+}
+main .container-todo-list ul li .icon-cross {
+  width: 0.8rem;
+  height: 0.8rem;
+  cursor: pointer;
+  visibility: none;
+  opacity: 0;
+}
+main .container-todo-list ul .drag-sort-active{
+  cursor:move;
+}
+main .container-todo-list ul li:hover > .icon-cross {
+  visibility: visibility;
+  opacity: 1;
+}
+main .state-list {
+  background-color: var(--bg-color-header);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.23rem 1rem;
+  position: relative;
+  font-size: 0.75rem;
+  color: var(--color-text-medio);
+  box-shadow: 0px 30px 16px -20px var(--sombra);
+  border-radius: 0 0 5px 5px;
+}
+main .state-list #clear-all-item:hover {
+  cursor: pointer;
+}
+main .state-list #clear-all-item:hover {
+  color: var(--color-text-hover);
+}
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: calc(50% - 0.625rem);
+  left: 1.35rem;
+  height: 1.25rem;
+  width: 1.25rem;
+  background: var(--bg-color-header);
+  border-radius: 100%;
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+.container-checkbox:hover input ~ .checkmark {
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(
+      var(--bg-color-header),
+      var(--bg-color-header)
+    ),
+    var(--Check-Background);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.container-checkbox input:checked ~ .checkmark {
+  background: var(--Check-Background);
+  border: none;
+}
+.container-checkbox input:checked ~ p {
+  text-decoration: line-through;
+  color: var(--color-text-medio);
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  animation: 0.2s checkmark;
+}
+@keyframes checkmark {
+  0% {
+    left: 0px;
+  }
+  70% {
+    left: 8px;
+  }
+  100% {
+    left: 10px;
+  }
+}
+.container-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.container-checkbox .checkmark:after {
+  left: 8px;
+  top: 5px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(50deg);
+}
+main .container-todo-filter {
+  border-radius: 5px;
+  background-color: var(--bg-color-header);
+  box-shadow: 0px 30px 16px -20px var(--sombra);
+  padding: 1rem;
+  max-width: 545px;
+  margin: 1.4rem auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+main .container-todo-filter .filter {
+  font-size: 0.9rem;
+  color: var(--color-text-medio);
+  padding: 0 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+main .container-todo-filter .filter.active {
+  color: var(--Bright-Blue);
+}
+
+main .container-todo-filter .filter:hover {
+  color: var(--color-text-hover);
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-medio);
+  position: relative;
+  transform: translate(0px, -1.5rem);
+  padding: 1rem;
+}
+
+@media (min-width: 600px) {
+  .container-header {
+    background: var(--bg-desktop) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  main .container-todo-filter {
+    background: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 0%;
+    left: 50%;
+    top: calc(100% - 2rem);
+  }
+}

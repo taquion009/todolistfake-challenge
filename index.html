@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>TODO</title>
+  </head>
+  <body>
+    <div class="container-header">
+      <header>
+        <h1>TODO</h1>
+        <img
+          src="assets/img/icon-moon.svg"
+          class="icon-theme"
+          id="icon-theme"
+          alt="theme"
+        />
+        
+      </header>
+      <form id="form">
+        <label class="container-checkbox">
+          <input type="checkbox" name="validtodo" id="validtodo" />
+          <span class="checkmark"></span>
+        </label>
+        <input
+          type="text"
+          name="add"
+          id="add-items"
+          class="add-item"
+          placeholder="Create a new todo..."
+        />
+      </form>
+    </div>
+    <main>
+      <div class="container-todo-list">
+        <ul class="todo-list" id="todo-list"></ul>
+        <div class="state-list">
+          <span id="count-items">5 items left</span>
+          <span id="clear-all-item">Clear Completed</span>
+        </div>
+        <div class="container-todo-filter">
+          <button id="filter_all" class="filter active">All</button>
+          <button id="filter_active" class="filter">Active</button>
+          <button id="filter_completed" class="filter">Completed</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Drag and drop to reorder list</p>
+    </footer>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/47585/slip.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
